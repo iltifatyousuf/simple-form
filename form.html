@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-link">
+        <div class="social-media-platform">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="bx bx-sm bxl-facebook"></i
+          ></a>
+          <a href="https://twitter.com/home" target="_blank"
+            ><i class="bx bx-sm bxl-twitter"></i
+          ></a>
+          <a href="https://github.com/" target="_blank"
+            ><i class="bx bx-sm bxl-github"></i
+          ></a>
+        </div>
+        <div class="logo">
+          <i class="bx bx-collapse-horizontal"></i>
+          <span class="text">APEXURE</span>
+        </div>
+        <p class="side-big-heading">
+          The Conversion Focused Landing Page & Web Design Agency
+        </p>
+        <p class="primary-bg-text">
+          We accelerate business growth via effective websites & creative
+          landing page designs.
+        </p>
+        <!-- <a href="login.html" class="loginbtn">Login</a> -->
+      </div>
+      <form
+        action="#"
+        class="signup-form-container"
+        method="post"
+        autocomplete="off"
+        onsubmit="submitForm(); return false;"
+      >
+        <p class="big-heading">Complete the form</p>
+        <p id="sub">our experts will contact you soon.</p>
+
+        <div class="progress-bar">
+          <div class="stage">
+            <p class="tool-tip">Contact info</p>
+            <p class="stageno stageno-1">1</p>
+          </div>
+          <div class="stage">
+            <p class="tool-tip">Feedback</p>
+            <p class="stageno stageno-2">2</p>
+          </div>
+          <!-- <div class="stage">
+            <p class="tool-tip">Final Submit</p>
+            <p class="stageno stageno-3">3</p>
+          </div> -->
+        </div>
+
+        <!-- ============ Drop Down ===================== -->
+        <div class="stage4-content">
+          <div class="containerx">
+            <div class="wain">
+              <select name="lookingFor" id="lookingFor" required>
+                <option value="" disabled selected>
+                  Select what you are looking for
+                </option>
+                <option value="2">Web Designer</option>
+                <option value="3">Graphic Designer</option>
+                <option value="4">Web Development</option>
+                <option value="5">PPC Expert</option>
+                <option value="6">Not Sure</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="signup-form-content">
+          <div class="stage1-content">
+            <div class="button-container">
+              <div class="text-fields fname">
+                <label for="fname"><i class="bx bx-user"></i></label>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div class="text-fields lname">
+                <label for="lname"><i class="bx bx-user"></i></label>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="button-container">
+              <div class="text-fields phone">
+                <label for="phone"><i class="bx bx-phone"></i></label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="phone number"
+                  required
+                />
+              </div>
+              <div class="text-fields email">
+                <label for="email"><i class="bx bx-envelope"></i></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email id"
+                  required
+                />
+              </div>
+            </div>
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="next"
+                class="nextPage stagebtn1b"
+                onclick="stage1to2()"
+              />
+            </div>
+          </div>
+
+          <!-- ==== range slider ==== -->
+          <div class="stage5-content">
+            <div class="budget-wrap">
+              <div class="budget">
+                <div class="header">
+                  <div class="title clearfix">
+                    Set your budget! <span class="pull-right"></span>
+                  </div>
+                </div>
+                <div class="content">
+                  <input
+                    type="range"
+                    min="100"
+                    max="1000"
+                    value="200"
+                    id="budgetRange"
+                    data-rangeslider
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ======================= -->
+
+          <div class="stage2-content">
+            <!-- <div class="button-container">
+              <div class="text-fields password">
+                <label for="password"><i class="bx bx-lock-alt"></i></label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter password"
+                />
+              </div>
+              <div class="text-fields confirmpassword">
+                <label for="confirmpassword"
+                  ><i class="bx bx-lock-alt"></i
+                ></label>
+                <input
+                  type="password"
+                  name="confirmpassword"
+                  id="confirmpassword"
+                  placeholder="Enter password"
+                />
+              </div>
+            </div> -->
+
+            <div class="containery">
+              <div class="xain">
+                <select name="">
+                  <option value="1">When do you need it?</option>
+                  <option value="2">Immediately</option>
+                  <option value="3">Within a week</option>
+                  <option value="4">Within 20 days</option>
+                  <option value="5">Within a month</option>
+                  <option value="6">Within 3 months</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- <form action="/html/tags/html_form_tag_action.cfm" method="post"> -->
+            <div>
+              <textarea name="comments" id="comments"></textarea>
+            </div>
+            <!-- <input type="submit" value="Submit" /> -->
+            <!-- </form> -->
+
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="Previous"
+                class="previousPage stagebtn2a"
+                onclick="stage2to1()"
+              />
+
+              <input
+                type="submit"
+                value="submit"
+                class="nextPage stagebtn2b"
+                onclick="submitForm()"
+              />
+            </div>
+          </div>
+          <!-- 
+          <div class="stage3-content">
+            <div class="tc-container">
+              <label for="tc" class="tc">
+                <input type="checkbox" name="tc" id="tc" required />
+                By submiting your details, you agree to the
+                <a href="#"> terms and conditions. </a>
+              </label>
+            </div>
+            <div class="pagination-btns">
+              <input
+                type="button"
+                value="Previous"
+                class="previousPage stagebtn3a"
+                onclick="stage3to2()"
+              />
+
+              <input type="submit" value="submit" class="nextPage stagebtn3b" />
+            </div>
+          </div> -->
+        </div>
+      </form>
+    </div>
+    <script src="form.js"></script>
+  </body>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</html>
